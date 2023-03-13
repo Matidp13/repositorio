@@ -1,0 +1,9 @@
+header#logo a img {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    z-index: 1;
+    animation-name: heartBeat;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}

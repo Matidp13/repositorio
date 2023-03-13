@@ -1,0 +1,52 @@
+header {
+    grid-area: header;
+
+
+    section {
+
+        div {
+            h1 {
+                @extend .h1
+            }
+        }
+    }
+
+    nav {
+        &.h3 {
+            background-image: linear-gradient(113.3deg, rgba(228, 241, 93, 0.622) 6.9%, rgb(145, 40, 8) 75%);
+        }
+
+        div{
+            div {
+                form {
+                    button {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+    &.productos {
+        grid-area: productos;
+
+    }
+
+    div {
+        &.box {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+    div {
+        img {
+            height: 400px;
+            padding: 50px;
+        }
+    }
+
+}

@@ -33,156 +33,34 @@
 
 $font-family: impact;
 
+// Extend
 
-
-
-header#logo a img {
+.h1 {
+    color: rgb(98, 0, 255);
+    font-family: $font-family;
+    font-size: 80px;
+    text-align: center;
+    background-image: url(https://media.istockphoto.com/photos/tropical-palm-leaves-on-yellow-background-flat-lay-top-view-picture-id970718670?k=6&m=970718670&s=170667a&w=0&h=052uheCxjQ5Yn4XvA3H-eQ1VzcK7pGmXxdNPWXAQ2Fw=);
     height: 100px;
-    width: 100px;
-    position: absolute;
-    z-index: 1;
-    animation-name: heartBeat;
+    width: auto;
+    justify-content: center;
+    animation-name: pulse;
     animation-duration: 3s;
     animation-delay: 2s;
 }
 
-header {
-    grid-area: header;
-
-
-    section {
-
-        div {
-            h1 {
-                color: rgb(98, 0, 255);
-                font-family: $font-family;
-                font-size: 80px;
-                text-align: center;
-                background-image: url(https://media.istockphoto.com/photos/tropical-palm-leaves-on-yellow-background-flat-lay-top-view-picture-id970718670?k=6&m=970718670&s=170667a&w=0&h=052uheCxjQ5Yn4XvA3H-eQ1VzcK7pGmXxdNPWXAQ2Fw=);
-                height: 100px;
-                width: auto;
-                justify-content: center;
-                animation-name: pulse;
-                animation-duration: 3s;
-                animation-delay: 2s;
-            }
-        }
-    }
-
-    nav {
-        &.h3 {
-            background-image: linear-gradient(113.3deg, rgba(228, 241, 93, 0.622) 6.9%, rgb(145, 40, 8) 75%);
-        }
-
-        div {
-            form {
-                button {
-                    background-color: white;
-                }
-            }
-        }
-    }
+.etiqueta {
+    text-align: center;
+    font-family: $font-family;
+    font-size: 50px;
+    margin: 5px;
 }
 
-section {
-    &.productos {
-        grid-area: productos;
+@import "logo";
 
-    }
+@import "header";
 
-    div {
-        &.box {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-    }
-
-    div {
-        img {
-            height: 400px;
-            padding: 50px;
-        }
-    }
-
-}
-
-footer {
-    ul {
-        &.flex-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: center;
-            border: 1px solid black;
-            background: #ccc;
-            padding: 0px;
-            margin: 0px;
-            list-style: none;
-            align-items: baseline;
-
-            li.caja {
-                /*box-modeling*/
-                width: 120px;
-                height: 60px;
-
-                margin: 0px;
-                padding: 0%;
-
-                /*tipografías*/
-                color: black;
-                font-weight: bold;
-                text-align: center;
-                font-size: large;
-                font-family: $font-family;
-                text-align: center;
-
-
-
-                &.c1 {
-
-                    order: 1;
-                    margin: 0px;
-                    padding: 0%;
-
-                    img {
-                        width: 60px;
-                        height: 60px;
-                        align-items: center;
-                    }
-                }
-
-                &.c2 {
-                    order: 2;
-                    margin: 5px;
-
-
-                    img {
-                        width: 40px;
-                        height: 40px;
-                    }
-                }
-
-                &.c5 {
-                    order: 3;
-                    flex-grow: 3;
-                    font-family: $font-family;
-                    font-size: large;
-                    padding: 10px;
-                }
-
-                &.c3 {
-                    order: 3;
-                    align-items: center;
-                    flex-grow: 3;
-                }
-            }
-        }
-
-    }
-
-
-}
+@import "footer";
 
 
 
@@ -225,39 +103,6 @@ body {
         header {
             grid-area: header;
 
-
-            section {
-
-                div {
-                    h1 {
-                        color: rgb(98, 0, 255);
-                        font-family: $font-family;
-                        font-size: 80px;
-                        text-align: center;
-                        background-image: url(https://media.istockphoto.com/photos/tropical-palm-leaves-on-yellow-background-flat-lay-top-view-picture-id970718670?k=6&m=970718670&s=170667a&w=0&h=052uheCxjQ5Yn4XvA3H-eQ1VzcK7pGmXxdNPWXAQ2Fw=);
-                        height: 100px;
-                        width: auto;
-                        justify-content: center;
-                        animation-name: pulse;
-                        animation-duration: 3s;
-                        animation-delay: 2s;
-                    }
-                }
-            }
-
-            nav {
-                &.h3 {
-                    background-image: linear-gradient(113.3deg, rgba(228, 241, 93, 0.622) 6.9%, rgb(145, 40, 8) 75%);
-                }
-
-                div {
-                    form {
-                        button {
-                            background-color: white;
-                        }
-                    }
-                }
-            }
         }
 
         section {
@@ -344,82 +189,7 @@ body {
         }
 
 
-        footer {
-            ul {
-                &.flex-container {
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: nowrap;
-                    justify-content: center;
-                    border: 1px solid black;
-                    background: #ccc;
-                    padding: 0px;
-                    margin: 0px;
-                    list-style: none;
-                    align-items: baseline;
 
-                    li.caja {
-                        /*box-modeling*/
-                        width: 120px;
-                        height: 60px;
-
-                        margin: 0px;
-                        padding: 0%;
-
-                        /*tipografías*/
-                        color: black;
-                        font-weight: bold;
-                        text-align: center;
-                        font-size: large;
-                        font-family: $font-family;
-                        text-align: center;
-
-
-
-                        &.c1 {
-
-                            order: 1;
-                            margin: 0px;
-                            padding: 0%;
-
-                            img {
-                                width: 60px;
-                                height: 60px;
-                                align-items: center;
-                            }
-                        }
-
-                        &.c2 {
-                            order: 2;
-                            margin: 5px;
-
-
-                            img {
-                                width: 40px;
-                                height: 40px;
-                            }
-                        }
-
-                        &.c5 {
-                            order: 3;
-                            flex-grow: 3;
-                            font-family: $font-family;
-                            font-size: large;
-                            padding: 10px;
-                        }
-
-                        &.c3 {
-                            order: 3;
-                            align-items: center;
-                            flex-grow: 3;
-                        }
-                    }
-                }
-
-            }
-
-
-        }
     }
 }
 
@@ -475,9 +245,9 @@ body {
 
                     div {
                         h1 {
-                            color: rgb(82, 80, 232);
+                            color: rgb(98, 0, 255);
                             font-family: $font-family;
-                            font-size: 100px;
+                            font-size: 80px;
                             text-align: center;
                             background-image: url(https://media.istockphoto.com/photos/tropical-palm-leaves-on-yellow-background-flat-lay-top-view-picture-id970718670?k=6&m=970718670&s=170667a&w=0&h=052uheCxjQ5Yn4XvA3H-eQ1VzcK7pGmXxdNPWXAQ2Fw=);
                             height: 100px;
@@ -761,301 +531,90 @@ body {
 
         }
 
-        aside {
-            grid-area: mapa;
-        }
-
-        header {
-            grid-area: header;
 
 
-            section {
+        
 
-                div {
-                    h1 {
-                        color: rgb(98, 0, 255);
-                        font-family: $font-family;
-                        font-size: 80px;
-                        text-align: center;
-                        background-image: url(https://media.istockphoto.com/photos/tropical-palm-leaves-on-yellow-background-flat-lay-top-view-picture-id970718670?k=6&m=970718670&s=170667a&w=0&h=052uheCxjQ5Yn4XvA3H-eQ1VzcK7pGmXxdNPWXAQ2Fw=);
-                        height: 100px;
-                        width: auto;
-                        justify-content: center;
-                        animation-name: pulse;
-                        animation-duration: 3s;
-                        animation-delay: 2s;
-                    }
-                }
-            }
-
-            nav {
-                &.h3 {
-                    background-image: linear-gradient(113.3deg, rgba(228, 241, 93, 0.622) 6.9%, rgb(145, 40, 8) 75%);
-                }
-
-                div {
-                    form {
-                        button {
-                            background-color: white;
-                        }
-                    }
-                }
-            }
-        }
-
-        section {
-            &.productos {
-                grid-area: productos;
-            }
-
-            div {
-                &.box {
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                }
-            }
-
-            div {
-                img {
-                    height: 400px;
-                    padding: 50px;
-                }
-            }
-
-        }
-
-
-
-
-
-
-
-        nav.nav {
-            grid-area: nav;
-
-            section {
-                &.container-fluid {
-                    nav {
-                        div.h2.btn-group-vertical {
-                            button.btn.btn-primaryH {
-                                @include buttons;
-                            }
-                        }
-
-                        button.btn.btn-primaryM {
-                            @include buttons;
-                        }
-
-
-                        button.btn.btn-primaryN {
-                            @include buttons;
-                        }
-                    }
-                }
-            }
-        }
-
-        aside {
-            iframe {
-                &.caja {
-                    /*box-modeling*/
-                    width: 250px;
-                    height: 100px;
-
-                    margin: 0px;
-                    padding: 0%;
-
-                    /*tipografías*/
-                    color: black;
-                    font-weight: bold;
-                    text-align: center;
-                    font-size: large;
-                    font-family: $font-family;
-                    text-align: center;
-
-                }
-
-                &.c4 {
-                    order: 4;
-                    height: 580px;
-                    width: 240px;
-                    padding: 5px;
-
-                }
-            }
-        }
-
-
-        footer {
-            ul {
-                &.flex-container {
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: nowrap;
-                    justify-content: center;
-                    border: 1px solid black;
-                    background: #ccc;
-                    padding: 0px;
-                    margin: 0px;
-                    list-style: none;
-                    align-items: baseline;
-
-                    li.caja {
-                        /*box-modeling*/
-                        width: 120px;
-                        height: 60px;
-
-                        margin: 0px;
-                        padding: 0%;
-
-                        /*tipografías*/
-                        color: black;
-                        font-weight: bold;
-                        text-align: center;
-                        font-size: large;
-                        font-family: $font-family;
-                        text-align: center;
-
-
-
-                        &.c1 {
-
-                            order: 1;
-                            margin: 0px;
-                            padding: 0%;
-
-                            img {
-                                width: 60px;
-                                height: 60px;
-                                align-items: center;
-                            }
-                        }
-
-                        &.c2 {
-                            order: 2;
-                            margin: 5px;
-
-
-                            img {
-                                width: 40px;
-                                height: 40px;
-                            }
-                        }
-
-                        &.c5 {
-                            order: 3;
-                            flex-grow: 3;
-                            font-family: $font-family;
-                            font-size: large;
-                            padding: 10px;
-                        }
-
-                        &.c3 {
-                            order: 3;
-                            align-items: center;
-                            flex-grow: 3;
-                        }
-                    }
-                }
-
-            }
-
-
-        }
     }
 }
 
 
+// mediaqueries nosotros
 
-
-/*Mediaqueries*/
-@media screen and (min-width:576px) and (max-width:990px) {
-
-    body div header nav {
-        z-index: 1;
-    }
+@media screen and (min-width: 576px) and (max-width:990px) {
 
     body {
-
+        background-image: url(../imagenes/ian-dooley-TT-ROxWj9nA-unsplash\ \(1\).jpg);
         background-color: yellow;
-
-
+    
+    
         div#grilla-nosotros {
             display: grid;
-            grid-template-areas: "header      header      header"
-                "nav         productos        mapa"
-                "footer      footer      footer";
-            grid-template-rows: 200px auto 80px;
-            grid-template-columns: 100px auto 250px;
+            grid-template-areas:
+                "header         "
+                "nosotros       "
+                "footer         "
+            ;
+            grid-template-rows: 200px auto 100px;
+            grid-template-columns: 100%;
             margin: 0;
-            padding: 10px;
-
+            padding: 0;
+    
             #grilla header {
                 grid-area: header;
             }
-
-
+    
+    
             #grilla footer {
                 grid-area: footer;
                 background-color: aqua;
             }
-
+    
             nav {
                 grid-area: nav;
             }
-
-            section {
-                grid-area: productos;
-            }
-
-            aside {
-                grid-area: mapa;
-            }
-
-            header {
-                grid-area: header;
-
-
-                section {
-
-                    div {
-                        h1 {
-                            color: rgb(82, 80, 232);
-                            font-family: $font-family;
-                            font-size: 100px;
-                            text-align: center;
-                            background-image: url(https://media.istockphoto.com/photos/tropical-palm-leaves-on-yellow-background-flat-lay-top-view-picture-id970718670?k=6&m=970718670&s=170667a&w=0&h=052uheCxjQ5Yn4XvA3H-eQ1VzcK7pGmXxdNPWXAQ2Fw=);
-                            height: 100px;
-                            width: auto;
-                            justify-content: center;
-                            animation-name: pulse;
-                            animation-duration: 3s;
-                            animation-delay: 2s;
-                        }
+    
+            section#nosotros {
+                grid-area: nosotros;
+                background-color: coral;
+                justify-items: center;
+                background: none;
+    
+                div.card.mb-3 {
+                    background: none;
+    
+                    img.card-img-top {
+                        height: auto;
+                        width: auto;
+                    }
+    
+                    div.card-body {
+                        background-color: pink;
                     }
                 }
-
-                nav {
-                    &.h3 {
-                        background-image: linear-gradient(113.3deg, rgba(228, 241, 93, 0.622) 6.9%, rgb(145, 40, 8) 75%);
+    
+                div.card {
+                    background: none;
+    
+                    img.card-img-bottom {
+                        height: auto;
+                        width: auto;
                     }
-
-                    div {
-                        form {
-                            button {
-                                background-color: white;
-                            }
-                        }
+    
+                    div.card-body {
+                        background-color: pink;
                     }
                 }
+    
+    
             }
-
+    
+    
             section {
                 &.productos {
                     grid-area: productos;
                 }
-
+    
                 div {
                     &.box {
                         display: flex;
@@ -1063,85 +622,23 @@ body {
                         align-items: flex-start;
                     }
                 }
-
+    
                 div {
                     img {
-                        height: 300px;
-                        padding: 10px;
-
-                        &.img3 {
-                            display: none;
-                        }
+                        height: 400px;
+                        padding: 50px;
                     }
                 }
-
+    
             }
+    
 
-
-            nav.nav {
-                grid-area: nav;
-
-                section {
-                    &.container-fluid {
-                        nav {
-                            div.h2.btn-group-vertical {
-                                button.btn.btn-primaryH {
-                                    @include buttons;
-                                }
-                            }
-
-                            button.btn.btn-primaryM {
-                                @include buttons;
-                            }
-
-
-                            button.btn.btn-primaryN {
-                                @include buttons;
-                            }
-                        }
-                    }
-                }
-            }
-
-            aside {
-                iframe {
-                    &.caja {
-                        /*box-modeling*/
-                        width: 250px;
-                        height: 100px;
-
-                        margin: 0px;
-                        padding: 0%;
-
-                        /*tipografías*/
-                        color: black;
-                        font-weight: bold;
-                        text-align: center;
-                        font-size: large;
-                        font-family: $font-family;
-                        text-align: center;
-
-                    }
-
-                    &.c4 {
-                        order: 4;
-                        height: 580px;
-                        width: 240px;
-                        padding: 5px;
-
-                    }
-                }
-            }
-
-
-
+    
         }
     }
 
-
-
 }
-
+    
 
 
 
@@ -1176,7 +673,8 @@ form {
         textarea {
             display: flex;
             background-color: lightgoldenrodyellow;
-            width: auto;
+            width: 400px;
+            
         }
 
         nav {
@@ -1256,24 +754,17 @@ body {
                         h6 {
                             &.hombre {
                                 background-color: blue;
-                                text-align: center;
-                                font-family: $font-family;
-                                font-size: 50px;
-                                margin: 5px;
+                                @extend .etiqueta
                             }
+
                             &.mujer {
                                 background-color: pink;
-                                text-align: center;
-                                font-family: $font-family;
-                                font-size: 50px;
-                                margin: 5px;
+                                @extend .etiqueta
                             }
+
                             &.niños {
                                 background-color: yellow;
-                                text-align: center;
-                                font-family: $font-family;
-                                font-size: 50px;
-                                margin: 5px;
+                                @extend .etiqueta
                             }
                         }
                     }
