@@ -18,7 +18,7 @@
   animation-delay: 2s;
 }
 
-.etiqueta, body div#grilla-catalogo section div.box div h6.niños, body div#grilla-catalogo section div.box div h6.mujer, body div#grilla-catalogo section div.box div h6.hombre {
+.etiqueta, body div#grilla-categoria section div.box div h6.niños, body div#grilla-categoria section div.box div h6.mujer, body div#grilla-categoria section div.box div h6.hombre {
   text-align: center;
   font-family: impact;
   font-size: 50px;
@@ -40,9 +40,58 @@ header {
 }
 header nav.h3 {
   background-image: linear-gradient(113.3deg, rgba(228, 241, 93, 0.622) 6.9%, rgb(145, 40, 8) 75%);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-header nav div div form button {
-  background-color: white;
+header nav div div ul li a {
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  max-width: 320px;
+  height: 50px;
+  margin: 5px;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  letter-spacing: 2px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all ease 0.5s;
+  background: #c7e90a;
+}
+header nav div div ul li a:after,
+header nav div div ul li a:before {
+  width: 80px;
+  height: 200px;
+  content: "";
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+  top: -60px;
+  position: absolute;
+  transition: none;
+  right: -45%;
+  cursor: pointer;
+}
+header nav div div ul li a:before {
+  left: -48%;
+}
+header nav div div ul li a:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: #12c91b;
+}
+header nav div div ul li a:hover:after,
+header nav div div ul li a:hover:before {
+  transform: rotate(45deg), scaleX(130%);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all ease 0.5s;
+}
+header nav div div ul li a:hover:after {
+  right: 130%;
+}
+header nav div div ul li a:hover:before {
+  left: 130%;
 }
 
 section.productos {
@@ -121,9 +170,9 @@ body {
 }
 body div#grilla {
   display: grid;
-  grid-template-areas: "header      header      header" "nav         productos        mapa" "footer      footer      footer";
+  grid-template-areas: "      header      header" "         productos        mapa" "     footer      footer";
   grid-template-rows: 200px 1000px 80px;
-  grid-template-columns: 100px auto 250px;
+  grid-template-columns: auto 250px;
   margin: 0;
   padding: 10px;
 }
@@ -154,72 +203,6 @@ body div#grilla section div img {
   height: 400px;
   padding: 50px;
 }
-body div#grilla nav.nav {
-  grid-area: nav;
-}
-body div#grilla nav.nav section.container-fluid nav div.h2.btn-group-vertical button.btn.btn-primaryH {
-  width: 80px;
-  height: 200px;
-  border-radius: 20px;
-  border-bottom: 5px;
-  --bs-btn-color: #fff;
-  --bs-btn-bg: red;
-  --bs-btn-border-color: #0d6efd;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0b5ed7;
-  --bs-btn-hover-border-color: #0a58ca;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
-  --bs-btn-active-border-color: #0a53be;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0d6efd;
-  --bs-btn-disabled-border-color: #0d6efd;
-  font-family: impact;
-}
-body div#grilla nav.nav section.container-fluid nav button.btn.btn-primaryM {
-  width: 80px;
-  height: 200px;
-  border-radius: 20px;
-  border-bottom: 5px;
-  --bs-btn-color: #fff;
-  --bs-btn-bg: red;
-  --bs-btn-border-color: #0d6efd;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0b5ed7;
-  --bs-btn-hover-border-color: #0a58ca;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
-  --bs-btn-active-border-color: #0a53be;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0d6efd;
-  --bs-btn-disabled-border-color: #0d6efd;
-  font-family: impact;
-}
-body div#grilla nav.nav section.container-fluid nav button.btn.btn-primaryN {
-  width: 80px;
-  height: 200px;
-  border-radius: 20px;
-  border-bottom: 5px;
-  --bs-btn-color: #fff;
-  --bs-btn-bg: red;
-  --bs-btn-border-color: #0d6efd;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0b5ed7;
-  --bs-btn-hover-border-color: #0a58ca;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
-  --bs-btn-active-border-color: #0a53be;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0d6efd;
-  --bs-btn-disabled-border-color: #0d6efd;
-  font-family: impact;
-}
 body div#grilla aside iframe.caja {
   /*box-modeling*/
   width: 250px;
@@ -242,7 +225,7 @@ body div#grilla aside iframe.c4 {
 }
 
 /*Mediaqueries*/
-@media screen and (min-width: 576px) and (max-width: 990px) {
+@media (max-width: 990px) {
   body div header nav {
     z-index: 1;
   }
@@ -251,14 +234,22 @@ body div#grilla aside iframe.c4 {
   }
   body div#grilla {
     display: grid;
-    grid-template-areas: "header      header      header" "nav         productos        mapa" "footer      footer      footer";
+    grid-template-areas: "     header      header" "      productos        mapa" "     footer      footer";
     grid-template-rows: 200px auto 80px;
-    grid-template-columns: 100px auto 250px;
+    grid-template-columns: auto 250px;
     margin: 0;
     padding: 10px;
   }
-  body div#grilla #grilla header {
+  body div#grilla header {
     grid-area: header;
+  }
+  body div#grilla header header a img {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+  }
+  body div#grilla header section div h1 {
+    font-size: 70px;
   }
   body div#grilla #grilla footer {
     grid-area: footer;
@@ -309,72 +300,6 @@ body div#grilla aside iframe.c4 {
   }
   body div#grilla section div img.img3 {
     display: none;
-  }
-  body div#grilla nav.nav {
-    grid-area: nav;
-  }
-  body div#grilla nav.nav section.container-fluid nav div.h2.btn-group-vertical button.btn.btn-primaryH {
-    width: 80px;
-    height: 200px;
-    border-radius: 20px;
-    border-bottom: 5px;
-    --bs-btn-color: #fff;
-    --bs-btn-bg: red;
-    --bs-btn-border-color: #0d6efd;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
-    --bs-btn-hover-border-color: #0a58ca;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
-    font-family: impact;
-  }
-  body div#grilla nav.nav section.container-fluid nav button.btn.btn-primaryM {
-    width: 80px;
-    height: 200px;
-    border-radius: 20px;
-    border-bottom: 5px;
-    --bs-btn-color: #fff;
-    --bs-btn-bg: red;
-    --bs-btn-border-color: #0d6efd;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
-    --bs-btn-hover-border-color: #0a58ca;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
-    font-family: impact;
-  }
-  body div#grilla nav.nav section.container-fluid nav button.btn.btn-primaryN {
-    width: 80px;
-    height: 200px;
-    border-radius: 20px;
-    border-bottom: 5px;
-    --bs-btn-color: #fff;
-    --bs-btn-bg: red;
-    --bs-btn-border-color: #0d6efd;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
-    --bs-btn-hover-border-color: #0a58ca;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
-    font-family: impact;
   }
   body div#grilla aside iframe.caja {
     /*box-modeling*/
@@ -511,7 +436,7 @@ body div#grilla-nosotros section#nosotros div.card div.card-body {
   background-color: pink;
 }
 
-@media screen and (min-width: 576px) and (max-width: 990px) {
+@media (max-width: 990px) {
   body {
     background-image: url(../imagenes/ian-dooley-TT-ROxWj9nA-unsplash\ \(1\).jpg);
     background-color: yellow;
@@ -524,53 +449,22 @@ body div#grilla-nosotros section#nosotros div.card div.card-body {
     margin: 0;
     padding: 0;
   }
-  body div#grilla-nosotros #grilla header {
+  body div#grilla-nosotros header {
     grid-area: header;
   }
-  body div#grilla-nosotros #grilla footer {
-    grid-area: footer;
-    background-color: aqua;
+  body div#grilla-nosotros header header a img {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
   }
-  body div#grilla-nosotros nav {
-    grid-area: nav;
+  body div#grilla-nosotros header section div h1 {
+    font-size: 70px;
   }
-  body div#grilla-nosotros section#nosotros {
-    grid-area: nosotros;
-    background-color: coral;
-    justify-items: center;
-    background: none;
-  }
-  body div#grilla-nosotros section#nosotros div.card.mb-3 {
-    background: none;
-  }
-  body div#grilla-nosotros section#nosotros div.card.mb-3 img.card-img-top {
-    height: auto;
-    width: auto;
-  }
-  body div#grilla-nosotros section#nosotros div.card.mb-3 div.card-body {
-    background-color: pink;
-  }
-  body div#grilla-nosotros section#nosotros div.card {
-    background: none;
-  }
-  body div#grilla-nosotros section#nosotros div.card img.card-img-bottom {
-    height: auto;
-    width: auto;
-  }
-  body div#grilla-nosotros section#nosotros div.card div.card-body {
-    background-color: pink;
-  }
-  body div#grilla-nosotros section.productos {
+  body div#grilla-nosotros section {
     grid-area: productos;
   }
-  body div#grilla-nosotros section div.box {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  body div#grilla-nosotros section div img {
-    height: 400px;
-    padding: 50px;
+  body div#grilla-nosotros footer {
+    grid-area: footer;
   }
 }
 form div nav {
@@ -622,12 +516,108 @@ body div#grilla-catalogo section.productos div.subtitulos h6 {
   font-size: 50px;
 }
 
-body div#grilla-catalogo section div.box div h6.hombre {
+@media (max-width: 990px) {
+  body div#grilla-catalogo {
+    display: grid;
+    grid-template-areas: "header      " "productos    " "footer   ";
+    grid-template-rows: 200px auto 80px;
+    grid-template-columns: auto;
+    margin: 0;
+    padding: 10px;
+  }
+  body div#grilla-catalogo header {
+    grid-area: header;
+  }
+  body div#grilla-catalogo header header a img {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+  }
+  body div#grilla-catalogo header section div h1 {
+    font-size: 70px;
+  }
+  body div#grilla-catalogo section {
+    grid-area: productos;
+  }
+  body div#grilla-catalogo footer {
+    grid-area: footer;
+  }
+  body div#grilla-catalogo section.productos div.subtitulos h6 {
+    font-family: impact;
+    font-size: 50px;
+  }
+  body div#grilla-catalogo section.productos div.subtitulos div img.img3 {
+    display: none;
+  }
+}
+body div#grilla-categoria section div.box div h6.hombre {
   background-color: blue;
 }
-body div#grilla-catalogo section div.box div h6.mujer {
+body div#grilla-categoria section div.box div h6.mujer {
   background-color: pink;
 }
-body div#grilla-catalogo section div.box div h6.niños {
+body div#grilla-categoria section div.box div h6.niños {
   background-color: yellow;
+}
+body div#grilla-categoria section div.box2 {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  body div#grilla-categoria {
+    display: grid;
+    grid-template-areas: "header      " "productos    " "footer   ";
+    grid-template-rows: 200px auto 80px;
+    grid-template-columns: auto;
+    margin: 0;
+    padding: 10px;
+  }
+  body div#grilla-categoria header {
+    grid-area: header;
+  }
+  body div#grilla-categoria header header a img {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+  }
+  body div#grilla-categoria header section div h1 {
+    font-size: 70px;
+  }
+  body div#grilla-categoria section {
+    grid-area: productos;
+  }
+  body div#grilla-categoria footer {
+    grid-area: footer;
+  }
+  body div#grilla-categoria section div.box {
+    display: none;
+  }
+  body div#grilla-categoria section div.box2 {
+    display: block;
+  }
+  body div#grilla-categoria section div.box2 div h6.hombre2 {
+    background-color: blue;
+    text-align: center;
+    font-family: impact;
+    font-size: 50px;
+    margin: 5px;
+  }
+  body div#grilla-categoria section div.box2 div h6.mujer2 {
+    background-color: pink;
+    text-align: center;
+    font-family: impact;
+    font-size: 50px;
+    margin: 5px;
+  }
+  body div#grilla-categoria section div.box2 div h6.niños2 {
+    background-color: yellow;
+    text-align: center;
+    font-family: impact;
+    font-size: 50px;
+    margin: 5px;
+  }
+  body div#grilla-categoria section div.box2 div a img {
+    width: 100%;
+    height: auto;
+  }
 }/*# sourceMappingURL=estilos.css.map */
